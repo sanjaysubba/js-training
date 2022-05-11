@@ -1,0 +1,19 @@
+@keyframes jump{
+    15%{
+        transform: translateY(-30px);
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+}
+.notes p:hover{
+    animation-name: jump;  
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
