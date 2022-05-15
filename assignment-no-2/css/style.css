@@ -7,6 +7,15 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.logo{
+    text-transform: uppercase;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    font-size: 248px;
+    transform: translateX(-50%);
+    opacity: 0.05;
+}
 .mainDiv{
     height: 80vh;
     width: 90vw;
