@@ -121,7 +121,7 @@ function stopWatch(){
       start.setAttribute('value', 'stop');
       start.innerText = "stop";
       startInterval = setInterval(function(){
-        milliseconds += 1;
+        milliseconds += 5;
         if(milliseconds == 1000){
           milliseconds = 0;
           seconds ++;
@@ -139,7 +139,7 @@ function stopWatch(){
        let m = minutes < 10 ? "0" + minutes : minutes;
        let h = hours < 10 ? "0" + hours : hours;
         stopwatch.innerText = h + ' : '+ m + ' : ' + s + ' : ' + ms;
-      }, 1)
+      }, 5)
     }
     else{
       start.setAttribute('value', 'start');
