@@ -4,6 +4,7 @@ js for digital Clock
 var digitalWatchContainer = document.getElementById("digitalWatchContainer");
 
 var timeFormat = document.createElement("div");
+timeFormat.className = "timeFormat-container"
 digitalWatchContainer.appendChild(timeFormat);
 
 //inserting radio button input for 12 hour time format
