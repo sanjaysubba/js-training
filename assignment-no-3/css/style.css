@@ -1,0 +1,53 @@
+body{
+    position: relative;
+}
+#carousel{
+    width:900px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider-wrap{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0%;
+}
+.slide{
+    min-width: 100%;
+}
+img{
+    height: 500px;
+    width: 100%;
+}
+#prev, #next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+#prev{
+    left: 0;
+}
+#next{
+    right: 0;
+}
+.carousel-dots{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 10px;
+
+}
+.dots{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 1px white;
+}
+.active{
+    background-color: red;
+}
