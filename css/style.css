@@ -1,6 +1,57 @@
-li{
-    margin-bottom:10px;
+.container{
+    padding: 0 50px;
 }
-a{
-    margin: 0 20px;
+.header{
+    text-align: center;
+    margin:40px 0 60px 0;
+}
+
+.assignment{
+    display: flex;
+    gap: 40px;
+}
+.assignment-list{
+    background-color: #dddada;
+    padding: 60px 0;
+    position: relative;
+    border-radius: 10px;
+    width: 20%;
+}
+.assignment-number{
+    font-size: 60px;
+    font-weight: 900;
+    font-family: sans-serif;
+    position: absolute;
+    right: 10%;
+    bottom: 3%;
+    margin: 0;
+    opacity: 0.4;
+    transition: all 0.5s ease-in;
+}
+.assignment-title{
+    padding: 0 40px;
+    min-height: 38px;
+}
+.assignment-list:hover .assignment-number{
+    opacity: 0.8;
+    bottom: 70%;
+}
+.assignment-link{
+    padding: 0;
+}
+.assignment-link li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.assignment-link li a:hover{
+    transform: scale(1.1);
+}
+.assignment-link li a{
+    background: #6477b6;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: all 0.3s ease-in-out;
 }

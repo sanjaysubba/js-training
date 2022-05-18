@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+#box{
+    position: absolute;
+    background: blue;
+}
+#box2{
+    position: absolute;
+    background-color: red;
+}
+#main{
+    position: relative;
+    background: grey;
+}
