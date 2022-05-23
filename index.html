@@ -79,6 +79,12 @@
         </div>
     </div>
     <a href="abc.html">click me</a>
+    
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <input id="submit" type="submit" value="Submit">
+  </form> 
 <script>
     document.addEventListener('click',function(event){
         if(event.target.id == 'demo-btn'){
@@ -95,9 +101,19 @@
             );
         }
     })
-    window.addEventListener("beforeunload", function(event) {
-        gtag('event', 'page-unloaded');
-});
+    const inpt = document.getElementById('fname');
+    inpt.addEventListener('keyup', function(){
+        window.addEventListener("beforeunload", function(event) {
+            if(document.getElementById('submit').clicked == true)
+            {
+                gtag('event', 'submit-clicked');
+            }
+            else{
+                gtag('event', 'submit-not-clicked');
+
+            }
+        });
+    })
 </script>
 </body>
 </html>
