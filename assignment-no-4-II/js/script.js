@@ -91,11 +91,12 @@ function animation(){
             changeColor1();
             changeColor2();
         }
-        if(box1LeftEdge == box2RightEdge && box1BottomEdge >= box2TopEdge && box1TopEdge <= box2BottomEdge){
+        if(box1LeftEdge == box2RightEdge && box2BottomEdge >= box1TopEdge && box2TopEdge <= box1BottomEdge){
             box1.direction.x = box1.direction.x * -1;
             box2.direction.x = box2.direction.x * -1;           
             changeColor1();
             changeColor2();
+            debugger;
         }
         if(box1TopEdge == box2BottomEdge && box1LeftEdge <= box2RightEdge && box1RightEdge >= box2LeftEdge){
             box1.direction.y = box1.direction.y * -1;
@@ -168,3 +169,19 @@ function animation(){
 }
 
 animation();
+
+
+
+for(var i=0; i<10; i++){
+    setTimeout(function(){
+        console.log(i);
+    },1000)
+}
+
+for(var j=0; j<10; j++){
+    setTimeout(function(val){
+        return function(){
+            console.log(val);
+        };
+    }(j), 1000);
+}
