@@ -82,7 +82,7 @@
     
 <form action="#">
     <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
+    <input type="text" id="fname" name="fname"><br>
     <input id="submit" type="submit" value="Submit">
   </form> 
 <script>
@@ -102,7 +102,7 @@
         }
     })
     const inpt = document.getElementById('fname');
-    inpt.addEventListener('keyup', function(){
+    inpt.addEventListener('change', function(){
         window.addEventListener("beforeunload", function(event) {
             if(document.getElementById('submit').clicked == true)
             {
