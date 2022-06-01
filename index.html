@@ -101,6 +101,32 @@
                     </li>
                 </ul>
             </div>
+            
+            <div class="assignment-list">
+                <p class="assignment-number">06</p>
+                <h4 class="assignment-title">Ball Collision using canvas</h4>
+                <ul class="assignment-link">
+                    <li>
+                        <a target="_blank" href="https://github.com/sanjaysubba/js-training/tree/master/assignment-no-6-II">code</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://sanjaysubba.github.io/js-training/assignment-no-6-II/index.html">demo</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="assignment-list">
+                <p class="assignment-number">07</p>
+                <h4 class="assignment-title">Canvas Brick Breaker</h4>
+                <ul class="assignment-link">
+                    <li>
+                        <a target="_blank" href="https://github.com/sanjaysubba/js-training/tree/master/assignment-no-7">code</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://sanjaysubba.github.io/js-training/assignment-no-7/index.html">demo</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- <a id="trya">click me</a>
@@ -149,3 +175,48 @@
 </script>
 </body>
 </html>
+
+<!-- 
+
+var btn = document.getElementById('FirstName');
+btn.addEventListener('click', function() {
+  window.dataLayer.push({
+    event: 'form.abandoned'
+
+
+    <script>
+        (function(){
+          var submitState;
+          var count = 0;
+          var submitButton = document.querySelector('#mktoForm_1010 button');
+          var input = document.querySelectorAll('#mktoForm_1010 input');
+          for( var i = 0; i < input.length; i++){
+            input[i].setAttribute('state', 'unchanged');
+            (function(i){
+              input[i].addEventListener('change', function(){
+                var inputState = input[i].getAttribute('state');
+                submitButton.setAttribute('state', 'unclicked');
+                if(input[i].classList.contains('mktovalid') && inputState == 'unchanged'){
+                  count = count + 1;
+                  input[i].setAttribute('state', 'changed');
+                }
+              })
+            })(i);
+          }
+          submitButton.addEventListener('click', function(){
+            if(count == input.length){
+              submitButton.setAttribute('state', 'clicked');
+            }
+          });
+          window.addEventListener('beforeunload', function() {
+            if(submitButton.getAttribute('state') == 'unclicked'){
+              window.dataLayer.push({
+                'event' : 'formAbandonment',
+              });
+            }
+            
+          });
+        
+          
+        })();
+      </script> -->
