@@ -47,11 +47,11 @@ function animateBall(){
     requestAnimationFrame(animateBall);
     
     /*defining bricks*/
-    c.fillRect(100, 50, 60, 20);
-    c.fillRect(300, 20, 60, 20);
-    c.fillRect(400, 80, 260, 20);
-    c.fillRect(800, 50, 260, 20);
-    c.fillRect(970, 80, 260, 20);
+    // c.fillRect(100, 50, 60, 20);
+    // c.fillRect(300, 20, 60, 20);
+    // c.fillRect(400, 80, 260, 20);
+    // c.fillRect(800, 50, 260, 20);
+    // c.fillRect(970, 80, 260, 20);
 
 
     c.fillRect(x, y, hitterWidth, 50);
