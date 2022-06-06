@@ -12,6 +12,7 @@ var boxWidth = 100;
 var molePositionX;
 var molePositionY;
 var initialPositionX = x;
+
 var initialPositionY = y;
 var maxX = (initialPositionX / 100) + 2;
 var minX = initialPositionX / 100;
@@ -26,6 +27,10 @@ var loopStart;
 var loopTimeElapsed;
 var gameSpeed = 1000;
 var clickStatus = 'unclicked';
+const image = new Image();
+image.src = 'image/mole.jpeg'
+const image1 = new Image();
+image1.src = 'image/deadMole.webp'
 
 function drawHeadingText(){
     c.font="30px Comic Sans MS";
@@ -59,15 +64,17 @@ function drawMole(){
     molePositionX = Math.floor(Math.random ()* ( maxX- minX + 1) + minX) * 100;
     molePositionY = Math.floor(Math.random ()* (maxY - minY + 1) + minY) * 100;
     c.fillStyle = 'yellow';
-    c.fillRect(molePositionX, molePositionY, boxWidth, boxHeight);
+    // c.fillRect(molePositionX, molePositionY, boxWidth, boxHeight);
+    c.drawImage(image,molePositionX, molePositionY, boxWidth, boxHeight);
     c.stroke();
 }
 
 function inputHandler(){
-    window.addEventListener('click', function(event){
+    window.addEventListener('mousedown', function(event){
         if(event.x > molePositionX && event.x < (molePositionX + boxWidth) && event.y > molePositionY && event.y < (molePositionY +  boxHeight) && clickStatus == 'unclicked'){
             score = score + 1; 
             clickStatus = 'clicked';
+            c.drawImage(image1,molePositionX, molePositionY, boxWidth, boxHeight);
         }
     })
 }
