@@ -42,9 +42,28 @@ var ball = {
     },
     radius : 30,
 }
+var initialBrickPOsitionX = 100;
+var brickPositionX = initialBrickPOsitionX;
+var brickPositionY = 100;
+var brickWidth = 200;
+var brickHeight = 50;
+var gapX = 20;
+var gapY = 40;
+function drawBricks(){
+    for( var i = 0; i < 3; i++){
+        for( var j = 0; j<3; j++){
+            c.fillRect(brickPositionX, brickPositionY, brickWidth, brickHeight);
+            console.log(brickPositionX);
+            brickPositionX = brickPositionX + brickWidth + gapX;
+        }
+        brickPositionX = initialBrickPOsitionX;
+        brickPositionY = brickPositionY + brickHeight + gapY;
+    }
+}
+drawBricks();
 function animateBall(){
-    c.clearRect(0, 0 , canvasWidth, canvasHeight)
-    requestAnimationFrame(animateBall);
+   // c.clearRect(0, 0 , canvasWidth, canvasHeight)
+    // requestAnimationFrame(animateBall);
     
     /*defining bricks*/
     // c.fillRect(100, 50, 60, 20);
