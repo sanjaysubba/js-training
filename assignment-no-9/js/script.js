@@ -1,5 +1,5 @@
 const canvas = document.querySelector('canvas');
-var canvasHeight = window.innerHeight - 50;
+var canvasHeight = window.innerHeight - 200;
 var canvasWidth = 600;
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
@@ -26,6 +26,7 @@ var holeY =  Math.floor(Math.random() * (holeYMax - holeYMin) + holeYMin);
 var collision = 'notCollided';
 var gameOver = 'false';
 var score = 0;
+var start;
 // var image = new Image();
 // image.src = 'images/parrot.png'
 // var image1 = new Image();
@@ -34,7 +35,22 @@ var score = 0;
 function drawCanvas(){
     c.strokeRect(0, 0, canvasWidth, canvasHeight);
 }
+drawCanvas();
+function note(){
+    c.font = "30px Arial";
+    c.textAlign = "center";
+    c.fillText("Press Spacebar to play", canvasWidth/2, canvasHeight/2);
+    window.addEventListener('keyup', function(e){
+        if (start == undefined){
+            if(e.key == " "){
+                start = 'started';
+                requestAnimationFrame(loop);
+            }
+        }
+    })
 
+}
+note();
 function drawBird(){
     c.fillStyle = 'red';
     c.beginPath();
@@ -123,4 +139,3 @@ function loop(timestamp){
     checkGameOver();
     gameOverText();
 }
-window.requestAnimationFrame(loop);
