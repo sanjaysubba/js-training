@@ -285,7 +285,7 @@ function brickCollision(){
                    if(brickStatus == 1){
                        b.status = false;
                        score = score + 2;
-                       var random = Math.floor((Math.random() * 2) + 1);
+                       var random = Math.floor((Math.random() * 4) + 1);
                        if( random == 1){
                            powerupPositionX.push(ballPositionX);
                            powerupPositionY.push(ballPositionY);
@@ -297,10 +297,13 @@ function brickCollision(){
                         if(b.damage <= 0){
                             score = score + 2;
                             b.status = false;
-                            var random = Math.floor((Math.random() * 5) + 1);
+                            var random = Math.floor((Math.random() * 4) + 1);
                             if( random == 1){
-                                    powerUpStatus.push(true);
-                                }
+                                
+                                powerupPositionX.push(ballPositionX);
+                                powerupPositionY.push(ballPositionY);
+                                powerUpStatus.push(true);
+                            }
                         }
                     }
                     ballVelocityY = ballVelocityY * -1;
