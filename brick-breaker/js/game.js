@@ -22,21 +22,21 @@ let damage = [];
 let bricks = [];
 let brickLevel = [{
     lvl : [
-    [1,1,1,2,0],
+    [1,1,1,1,1],
     [0,0,0,0,0],
-    [3,0,0,0,0]],
+    [0,0,0,0,0]],
 },
 {
     lvl : [
-    [2,1,2,1,2],
     [1,1,1,1,1],
-    [1,1,1,2,1]],
+    [2,2,2,2,2],
+    [1,1,1,1,1]],
 },
 {
     lvl : [
+    [3,1,2,1,3],
     [2,1,2,1,2],
-    [1,1,1,1,1],
-    [1,1,1,2,1]],
+    [3,1,2,2,3]],
 },
 ];
 var level = 0;
@@ -294,6 +294,10 @@ function brickCollision(){
                         if(b.damage <= 0){
                             score = score + 2;
                             b.status = false;
+                            var random = Math.floor((Math.random() * 5) + 1);
+                            if( random == 1){
+                                    powerUpStatus.push(true);
+                                }
                         }
                     }
                     ballVelocityY = ballVelocityY * -1;
