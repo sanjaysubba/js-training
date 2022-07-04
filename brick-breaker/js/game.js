@@ -39,12 +39,14 @@ let brickLevel = [{
     [3,1,2,2,3]],
 },
 ];
+canvas.height = window.innerHeight - 1;
+canvas.width = window.innerWidth - 0.5;
 var level = 0;
 var menuList = 3;
-var menuPositionX = 100;
-var menuPositionY = 100;
-var menuHeight = 500;
-var menuWidth = 1200;
+var menuPositionX = 0;
+var menuPositionY = 0;
+var menuHeight = window.innerHeight - 1;
+var menuWidth = window.innerWidth - 0.5;
 var menuOffset = 60;
 var text = ["Play","Control","Highscore"]
 var textPositionX = [];
@@ -72,9 +74,10 @@ var powerUpStatus = [];
 var initialPaddleWidth = 0;
 
 function menu(){
-    canvas.height = window.innerHeight - 1;
-    canvas.width = window.innerWidth - 0.5;
-    // c.clearRect(0, 0, canvas.width, canvas.height);
+    // canvas.height = window.innerHeight - 1;
+    // canvas.width = window.innerWidth - 0.5;
+    c.clearRect(0, 0, canvas.width, canvas.height);
+    
     c.fillStyle = "black";
     c.fillRect(menuPositionX,menuPositionY,menuWidth,menuHeight);
     for(var i=0; i<menuList; i++){
