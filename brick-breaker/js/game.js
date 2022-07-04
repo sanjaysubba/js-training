@@ -39,8 +39,8 @@ let brickLevel = [{
     [3,1,2,2,3]],
 },
 ];
-canvas.height = window.innerHeight - 1;
-canvas.width = window.innerWidth - 0.5;
+// canvas.height = window.innerHeight - 1;
+// canvas.width = window.innerWidth - 0.5;
 var level = 0;
 var menuList = 3;
 var menuPositionX = 0;
@@ -74,8 +74,8 @@ var powerUpStatus = [];
 var initialPaddleWidth = 0;
 
 function menu(){
-    // canvas.height = window.innerHeight - 1;
-    // canvas.width = window.innerWidth - 0.5;
+    canvas.height = window.innerHeight - 1;
+    canvas.width = window.innerWidth - 0.5;
     c.clearRect(0, 0, canvas.width, canvas.height);
     
     c.fillStyle = "black";
@@ -285,10 +285,10 @@ function brickCollision(){
                    if(brickStatus == 1){
                        b.status = false;
                        score = score + 2;
-                       powerupPositionX.push(ballPositionX);
-                       powerupPositionY.push(ballPositionY);
-                       var random = Math.floor((Math.random() * 5) + 1);
+                       var random = Math.floor((Math.random() * 2) + 1);
                        if( random == 1){
+                           powerupPositionX.push(ballPositionX);
+                           powerupPositionY.push(ballPositionY);
                             powerUpStatus.push(true);
                         }
                     }
